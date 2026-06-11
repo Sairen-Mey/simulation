@@ -1,15 +1,15 @@
-#ifndef RESOURSE_H
-#define RESOURSE_H
+#ifndef RESOURCE_H
+#define RESOURCE_H
 
 #include <stdint.h>
 
-enum RESOURCETYPES : uint8_t{
+typedef enum{
     EMPTY,
     TREE,
     STONE,
     IRON_ORE,
     COPPER_ORE,
-};
+}  RESOURCETYPES;
 
 typedef struct {
     uint8_t type;
@@ -17,8 +17,8 @@ typedef struct {
 } Resource;
 
 
-Resource create_resource(const enum RESOURCETYPES type);
-void change_resource_type(Resource* res, const enum RESOURCETYPES type);
+Resource create_resource(const RESOURCETYPES type);
+void change_resource_type(Resource* res, const RESOURCETYPES type);
 void delete_resource(Resource* res);
 void set_count_resource(Resource* res, const uint8_t count);
 

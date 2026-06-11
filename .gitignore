@@ -1,7 +1,8 @@
 
 *.o
-m
-run_tests
+
+build/
+
 
 test.c
 

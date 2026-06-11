@@ -5,18 +5,20 @@
 
 #include "resources.h"
 
-enum BLOCKTYPES : uint8_t{
+typedef enum {
     SAND,
     WATER,
     GRASS,
     MOUNTAIN,
     FOREST,
-};
+} BLOCKTYPES;
 
 typedef struct {
-    uint8_t type;
     Resource resourses;
+    uint8_t type;
 } Block;
 
+Block create_block(BLOCKTYPES block_type);
+void set_block_type(Block* block, BLOCKTYPES block_type);
 
 #endif
