@@ -2,10 +2,7 @@
 #include <stdio.h>
 
 Resource create_resource(const RESOURCETYPES type){
-    Resource res = {0};
-    change_resource_type(&res, type);
-    set_count_resource(&res, 0);
-    return res;
+    return (Resource){type,0};
 }
 
 void change_resource_type(Resource* res, const RESOURCETYPES type){
