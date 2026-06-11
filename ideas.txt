@@ -1,0 +1,57 @@
+[map] make chunks logic instead of 100*100 for map
+
+[resourses] make multiplier for count resourse
+
+[resourses] make resource extraction 
+{count_res <= 0 ? resource.type = EMPTY}
+{0 < count_res < 5 ? res_give = count_res}
+
+(Event-driven architecture) 
+{struct Request = id, type_task, progress, id unit}
+{request place from unit to CPU}
+{Broadcast}
+{different type quest and thier priority}
+{GET and POST}
+
+
+(profesion for units)
+{scauts visible - high, speed - high, inventar -not exist}
+{miner - speed - low, visible - lov, inventar - high, one-only request}
+
+(Network hops)
+{CPU don't see map, but unit can show him her}
+{telecommunications poles}
+{logic hops: cpu-1hop-2hop...nhop}
+
+(priority queue)
+{thunderstorm can make damage to poles}
+{CPU analysis - damage control}
+
+(data aging)
+{data from CPU can grow old - unit updates it}
+{rec_type = EMPTY - request -> CPU - delete it from data base CPU}
+
+(struct Signal)
+{x,y,speed,power,pauload, + receiver}
+{get and post methods}
+{mini_signal for units}
+
+[unit] add power
+{make signal - n power}
+{power < 5% - signal-low-power}
+{unit helper with power}
+{movement - straight line or A*}
+
+(generator)
+{system_power (in wat)}
+{consumption from: cpu, each active unit, poles}
+{crisis energi<5%}
+
+(energy predictor)
+{calculation energy to goal}
+{post - verification - get}
+
+(sub_cpu)
+{power/streng base / 2}
+{has their own generator(has /2 power)}
+{has control with thier own units. talks with main CPU}

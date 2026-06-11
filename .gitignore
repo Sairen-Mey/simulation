@@ -1,0 +1,16 @@
+
+*.o
+m
+run_tests
+
+test.c
+
+
+gui/.venv/
+venv/
+
+.vscode/
+*.swp
+
+.DS_Store
+Thumbs.db
