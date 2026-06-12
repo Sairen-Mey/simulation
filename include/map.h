@@ -13,5 +13,7 @@ typedef struct {
 } Map;
 
 
+Map create_map();
+void generate_map(Map* map);
 
 #endif

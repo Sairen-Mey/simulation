@@ -1,5 +1,6 @@
 [map] make chunks logic instead of 100*100 for map
 
+
 [resourses] make multiplier for count resourse
 
 [resourses] make resource extraction 

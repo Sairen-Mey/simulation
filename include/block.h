@@ -7,7 +7,6 @@
 
 typedef enum {
     SAND,
-    WATER,
     GRASS,
     MOUNTAIN,
     FOREST,
