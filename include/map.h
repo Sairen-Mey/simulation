@@ -13,7 +13,9 @@ typedef struct {
 } Map;
 
 
-Map create_map();
+Map create_map(void);
 void generate_map(Map* map);
+
+Block* get_block(Map* map, const uint8_t x, const uint8_t y);
 
 #endif

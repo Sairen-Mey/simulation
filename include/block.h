@@ -5,19 +5,24 @@
 
 #include "resources.h"
 
-typedef enum {
-    SAND,
-    GRASS,
-    MOUNTAIN,
-    FOREST,
+typedef enum : uint8_t {
+    EMPTY_BLOCK,
+    SAND_BLOCK,
+    GRASS_BLOCK,
+    MOUNTAIN_BLOCK,
+    FOREST_BLOCK,
 } BLOCKTYPES;
 
 typedef struct {
     Resource resourses;
-    uint8_t type;
+    BLOCKTYPES type;
 } Block;
 
-Block create_block(BLOCKTYPES block_type);
-void set_block_type(Block* block, BLOCKTYPES block_type);
+Block create_block(const BLOCKTYPES block_type);
+
+void set_block_type(Block* block, const BLOCKTYPES block_type);
+BLOCKTYPES get_block_type(const Block block);
+
+Resource get_resource(Block block);
 
 #endif

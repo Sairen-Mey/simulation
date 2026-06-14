@@ -5,7 +5,7 @@ Resource create_resource(const RESOURCETYPES type){
     return (Resource){type,0};
 }
 
-void change_resource_type(Resource* res, const RESOURCETYPES type){
+void set_resource_type(Resource* res, const RESOURCETYPES type){
     if (res == NULL) return;
 
     if (res->type != type){
@@ -14,9 +14,14 @@ void change_resource_type(Resource* res, const RESOURCETYPES type){
     }
 }
 
-void delete_resource(Resource* res){
+RESOURCETYPES get_resource_type(const Resource res){
+    return res.type;
+}
+
+
+void set_default_resource(Resource* res){
     if (res == NULL) return;
-    change_resource_type(res, EMPTY);
+    set_resource_type(res, EMPTY_RES);
 }
 
 void set_count_resource(Resource* res, const uint8_t count){
@@ -24,3 +29,6 @@ void set_count_resource(Resource* res, const uint8_t count){
     res->count_resource = count;
 }
 
+uint8_t get_count_resource(const Resource res){
+    return res.count_resource;
+}
