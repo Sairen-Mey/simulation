@@ -1,8 +1,8 @@
 #include "resources.h"
 #include <stdio.h>
 
-Resource create_resource(const RESOURCETYPES type){
-    return (Resource){type,0};
+Resource create_resource(const RESOURCETYPES type, const uint8_t count){
+    return (Resource){type,count};
 }
 
 void set_resource_type(Resource* res, const RESOURCETYPES type){

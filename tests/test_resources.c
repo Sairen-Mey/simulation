@@ -2,7 +2,7 @@
 #include "resources.h"
 
 TEST test_create_resource(void){
-    Resource res = create_resource(EMPTY_RES);
+    Resource res = create_resource(EMPTY_RES,0);
 
     ASSERT(res.type == EMPTY_RES);
     ASSERT_EQ(0, res.count_resource);
@@ -11,7 +11,7 @@ TEST test_create_resource(void){
 }
 
 TEST test_set_resource_type(void){
-    Resource res = create_resource(EMPTY_RES);
+    Resource res = create_resource(EMPTY_RES,0);
     
     set_resource_type(&res, TREE_RES);
 
@@ -27,7 +27,7 @@ TEST test_set_resource_type_with_NULL(void){
 }
 
 TEST test_set_default_resource(void){
-    Resource res = create_resource(EMPTY_RES);
+    Resource res = create_resource(EMPTY_RES,0);
     
     set_resource_type(&res, TREE_RES);
     set_count_resource(&res, 50);
@@ -47,7 +47,7 @@ TEST test_set_default_resource_with_NULL(void){
 }
 
 TEST test_set_count_resource(void){
-    Resource res = create_resource(EMPTY_RES);
+    Resource res = create_resource(EMPTY_RES,0);
 
     set_count_resource(&res, 1);
 
@@ -65,7 +65,7 @@ TEST test_set_count_resource_with_NULL(void){
 
 
 TEST test_get_resource_type(void){
-    Resource res = create_resource(EMPTY_RES);
+    Resource res = create_resource(EMPTY_RES,0);
 
     ASSERT_EQ(res.type, get_resource_type(res));
 
@@ -74,7 +74,7 @@ TEST test_get_resource_type(void){
 
 
 TEST test_get_count_resource(void){
-        Resource res = create_resource(EMPTY_RES);
+        Resource res = create_resource(EMPTY_RES,0);
 
     ASSERT_EQ(res.count_resource, get_count_resource(res));
 

@@ -16,7 +16,7 @@ typedef struct {
     uint8_t count_resource;
 } Resource;
 
-Resource create_resource(const RESOURCETYPES type);
+Resource create_resource(const RESOURCETYPES type, const uint8_t count);
 void set_resource_type(Resource* res, const RESOURCETYPES type);
 RESOURCETYPES get_resource_type(const Resource res);
 
